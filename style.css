@@ -57,7 +57,7 @@ nav ul li a:hover {
     justify-content: center; /* Center items vertically */
     align-items: center; /* Center items horizontally */
     height: 70vh; /* Full viewport height */
-    background: url('hero-bg.jpg') no-repeat center center/cover; /* Background image */
+    background: url('Project-image/hero-bg.jpg') no-repeat center center/cover; /* Background image */
     color: white; /* Text color */
     text-align: center; /* Center text */
     padding: 20px; /* Optional padding */
