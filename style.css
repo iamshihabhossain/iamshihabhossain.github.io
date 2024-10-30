@@ -1,0 +1,221 @@
+/* Reset margin and padding for all elements */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styles */
+body {
+    font-family: 'Roboto', sans-serif; /* Font family */
+    line-height: 1.6; /* Line height */
+    background-color: #f4f4f4; /* Background color */
+    padding-top: 60px; /* Prevent content from being hidden behind the fixed navbar */
+}
+
+/* Navigation bar styles */
+nav {
+    display: flex;
+    justify-content: flex-end; /* Align items to the right */
+    background: teal; /* Background color */
+    padding: 1rem 0; /* Padding for navbar */
+    position: fixed; /* Fixed position */
+    top: 0; /* Position at the top */
+    left: 0; /* Start from the left */
+    width: 100%; /* Full width */
+    z-index: 1000; /* Layer above other content */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+}
+
+nav ul {
+    display: flex;
+    justify-content: flex-end; /* Align items to the right */
+    list-style: none; /* Remove list style */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+}
+
+nav ul li {
+    margin: 0 2rem; /* Space between menu items */
+}
+
+nav ul li a {
+    color: white; /* Text color */
+    text-decoration: none; /* Remove underline */
+    font-weight: 500; /* Font weight */
+    transition: color 0.3s; /* Transition for hover effect */
+}
+
+nav ul li a:hover {
+    color: lightgray; /* Change color on hover */
+}
+
+/* Hero Section */
+.hero {
+    display: flex; /* Use flexbox */
+    flex-direction: column; /* Stack items vertically */
+    justify-content: center; /* Center items vertically */
+    align-items: center; /* Center items horizontally */
+    height: 70vh; /* Full viewport height */
+    background: url('hero-bg.jpg') no-repeat center center/cover; /* Background image */
+    color: white; /* Text color */
+    text-align: center; /* Center text */
+    padding: 20px; /* Optional padding */
+}
+
+.hero h1 {
+    font-size: 3rem; /* Font size for header */
+}
+
+/* Button styles */
+.btn {
+    background-color: teal; /* Background color */
+    color: white; /* Text color */
+    padding: 10px 20px; /* Padding for button */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 16px; /* Font size */
+    cursor: pointer; /* Pointer cursor */
+    margin-top: 20px; /* Space above the button */
+    transition: background-color 0.3s; /* Transition effect */
+    width: auto; /* Allow width to be determined by content */
+    max-width: 200px; /* Set a max width for the button */
+    text-align: center; /* Center text in button */
+}
+
+.btn:hover {
+    background-color: darkcyan; /* Darker shade on hover */
+}
+
+/* Portfolio Section */
+.portfolio {
+    padding: 2rem; /* Padding for section */
+    text-align: center; /* Center text */
+}
+
+.grid-container {
+    display: grid; /* Grid layout */
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Responsive columns */
+    gap: 20px; /* Gap between grid items */
+    margin-top: 2rem; /* Margin above grid */
+}
+
+.grid-item {
+    position: relative; /* Relative positioning for overlay */
+    overflow: hidden; /* Hide overflow */
+}
+
+.grid-item img {
+    width: 100%; /* Full width of item */
+    transition: transform 0.3s ease; /* Transition for scaling */
+}
+
+.grid-item:hover img {
+    transform: scale(1.1); /* Scale image on hover */
+}
+
+.overlay {
+    position: absolute; /* Absolute positioning for overlay */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7); /* Overlay background color */
+    color: white; /* Text color */
+    display: flex; /* Flexbox layout */
+    flex-direction: column; /* Stack vertically */
+    justify-content: center; /* Center content */
+    align-items: center; /* Center items */
+    opacity: 0; /* Hidden by default */
+    transition: opacity 0.3s ease; /* Transition for fade-in */
+}
+
+.grid-item:hover .overlay {
+    opacity: 1; /* Show overlay on hover */
+}
+
+.grid-item a {
+    text-decoration: none; /* Remove underline */
+    color: white; /* Text color */
+}
+
+/* Skills Section */
+.skills {
+    padding: 2rem; /* Padding for section */
+    background: #fff; /* Background color */
+    text-align: center; /* Center text */
+}
+
+.skills-grid {
+    display: flex; /* Flexbox layout */
+    justify-content: space-around; /* Space items evenly */
+    flex-wrap: wrap; /* Wrap items to next line */
+}
+
+.skill {
+    margin: 20px; /* Margin for each skill */
+    text-align: center; /* Center text */
+}
+
+.skill img {
+    width: 60px; /* Width for skill icons */
+}
+
+/* About Section */
+.about {
+    padding: 2rem; /* Padding for section */
+    text-align: center; /* Center text */
+}
+
+.about-content {
+    display: flex; /* Flexbox layout */
+    justify-content: center; /* Center items */
+    align-items: center; /* Center items vertically */
+}
+
+.about-content img {
+    width: 150px; /* Width for profile image */
+    border-radius: 50%; /* Circular image */
+    margin-right: 20px; /* Space between image and text */
+}
+
+/* Contact Section */
+.contact {
+    padding: 2rem; /* Padding for section */
+    background: teal; /* Background color */
+    color: white; /* Text color */
+    text-align: center; /* Center text */
+}
+
+.contact input, .contact textarea {
+    width: 100%; /* Full width for inputs */
+    padding: 10px; /* Padding for inputs */
+    margin: 10px 0; /* Margin for inputs */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Rounded corners */
+}
+
+.contact button {
+    background: darkslategray; /* Background color */
+    color: white; /* Text color */
+    padding: 10px 20px; /* Padding for button */
+    border: none; /* Remove border */
+    cursor: pointer; /* Pointer cursor */
+}
+
+.contact button:hover {
+    background: lightgray; /* Change background on hover */
+}
+
+/* Footer */
+footer {
+    text-align: center; /* Center text */
+    padding: 1rem; /* Padding for footer */
+    background: #333; /* Background color */
+    color: white; /* Text color */
+}
+
+.social-icons img {
+    width: 30px; /* Width for social icons */
+    margin: 0 10px; /* Space between icons */
+}
